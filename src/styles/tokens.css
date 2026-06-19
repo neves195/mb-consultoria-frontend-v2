@@ -1,8 +1,7 @@
 /* =============== TOKENS DE DESIGN - MB CONSULTORIA ============= */
 
 :root {
-    --logo: url('%PUBLIC_URL%/assets/logo-mb-branca.png');
-   
+      
     /*Cores de fundo */
     --color-bg-app: #161f2e;
     --color-bg-sidebar: #101826;
@@ -58,8 +57,13 @@
     /* Sombras */
     --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-sidebar: 2px 0 8px rgba(0, 0, 0, 0.15);
+
 }
 
     [data-theme='light'] {
-    --logo: url('/assets/logo-mb.png');
+    --color-bg-app: #f0f2f5;
+    --color-bg-sidebar: #1a3a5c;
+    --color-bg-card: #ffffff;
+    --color-text-primary: #1f2b3d;
+    --color-text-secondary: #5a6b82;
 }

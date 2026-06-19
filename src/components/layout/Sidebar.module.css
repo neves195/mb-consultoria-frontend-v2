@@ -14,11 +14,12 @@
 }
 
 /* LOGO */
-.brand {    
-    padding: 22px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex; 
-    justify-content: center;
+.brandLogo {    
+    width: 100%;
+    max-width: 176px;
+    height: auto;
+    display: block; 
+    margin: 0 auto;
 }
 
 .brand {

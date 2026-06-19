@@ -24,6 +24,7 @@ function Sidebar() {
 
     const nome = localStorage.getItem('nome') || 'Administrador';
     const perfil = localStorage.getItem('perfil') || 'admin';
+    const logoSrc = process.env.PUBLIC_URL + '/assets/logo-mb-branca.png';
 
     const isAtivo = (path) => location.pathname === path;
 
@@ -32,7 +33,11 @@ function Sidebar() {
 
             {/* Logo */}
             <div className={styles.brand}>
-                <div className={styles.brandLogo} role="img" aria-label="MB Consultoria Neves — Treinamentos" />
+                <img
+                    src={logoSrc}
+                    alt="MB Consultoria Neves — Treinamentos"
+                    className={styles.brandLogo}
+                />
             </div>
 
             {/* Menu principal */}
