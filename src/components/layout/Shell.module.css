@@ -1,0 +1,21 @@
+/* ===== SHELL ===== */
+
+.shell {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--color-bg-app);
+}
+
+.main {
+    margin-left: 244px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.conteudo {
+    margin-top: 56px;
+    padding: var(--spacing-x1);
+    flex: 1;
+}

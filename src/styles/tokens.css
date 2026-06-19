@@ -1,0 +1,65 @@
+/* =============== TOKENS DE DESIGN - MB CONSULTORIA ============= */
+
+:root {
+    --logo: url('%PUBLIC_URL%/assets/logo-mb-branca.png');
+   
+    /*Cores de fundo */
+    --color-bg-app: #161f2e;
+    --color-bg-sidebar: #101826;
+    --color-bg-card: #ffffff;
+    --color-bg-field: #f6f8fb;
+
+    /* Cores de texto */
+    --color-text-primary: #1f2b3d;
+    --color-text-secondary: #5a6b82;
+    --color-text-weak: #8896aa;
+    --color-text-white: #ffffff;
+
+    /* Cores de marca */
+    --color-primary: #2f6fed;
+    --color-teal: #0f9b8e;
+    --color-amber: #e8973a;
+    --color-green: #27ae8b;
+    --color-alert: #e0566f;
+    --color-purple: #8b6ff0;
+
+    /* Bordas */
+    --color-border: #e6eaf0;
+
+    /* Cores por NR */
+    --nr-35: #2f6fed;
+    --nr-10: #e8973a;
+    --nr-33: #0f9b8e;
+    --nr-12: #8b6ff0;
+    --nr-06: #27ae8b;
+    --nr-18: #e0566f;
+    --nr-20: #2f6fed;
+    --nr-11: #e8973a;
+
+     /* Tipografia */
+    --font-family: 'Ubuntu', sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+
+    /* Espaçamentos */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Bordas arredondadas */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* Sombras */
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-sidebar: 2px 0 8px rgba(0, 0, 0, 0.15);
+}
+
+    [data-theme='light'] {
+    --logo: url('/assets/logo-mb.png');
+}
