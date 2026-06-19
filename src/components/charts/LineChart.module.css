@@ -1,0 +1,16 @@
+/* ===== LINE CHART ===== */
+
+.card {
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
+}
+
+.titulo {
+    font-size: 15px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin: 0 0 16px 0;
+}

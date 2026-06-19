@@ -1,0 +1,61 @@
+/* ===== VENCIMENTOS ===== */
+
+.card {
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
+}
+
+.titulo {
+    font-size: 15px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin: 0 0 16px 0;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.badge {
+    flex-shrink: 0;
+    padding: 4px var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: 11px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-white);
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.nome {
+    font-size: 13px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+.empresa {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+}
+
+.dias {
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: var(--font-weight-bold);
+}
