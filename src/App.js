@@ -4,6 +4,7 @@ import Shell from './components/layout/Shell';
 
 // Páginas (vamos criar aos poucos)
 import Dashboard from './pages/Dashboard/Dashboard';
+import Login from './pages/Login/Login';
 
 // Rota protegida — redireciona para login se não tiver token
 function RotaProtegida({ children }) {
@@ -18,7 +19,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/login" element={<div>Login em breve</div>} />
+                <Route path="/login" element={<Login />} />
 
                 <Route path="/dashboard" element={
                     <RotaProtegida><Dashboard /></RotaProtegida>

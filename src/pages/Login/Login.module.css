@@ -1,0 +1,406 @@
+/* ===== LOGIN ===== */
+
+.stage {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    min-height: 100vh;
+    background: #eef1f6;
+}
+
+/* ---------- LADO MARCA ---------- */
+.brand {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(120% 120% at 18% 12%, #1c2b46 0%, var(--color-bg-sidebar) 55%, #0b101b 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 54px 56px;
+}
+
+.brandLogo {
+    width: 208px;
+    height: auto;
+    aspect-ratio: 327 / 168;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.brandMid {
+    max-width: 440px;
+}
+
+.brandTag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 13px;
+    font-weight: var(--font-weight-medium);
+    color: #9fc0ff;
+    background: rgba(47, 111, 237, 0.16);
+    border: 1px solid rgba(91, 140, 245, 0.28);
+    padding: 7px 14px;
+    border-radius: 30px;
+    margin-bottom: 26px;
+}
+
+.brandH1 {
+    font-size: 38px;
+    line-height: 1.18;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-white);
+    letter-spacing: -0.6px;
+    text-wrap: balance;
+}
+
+.brandH1 span {
+    color: #7fb0ff;
+}
+
+.brandSub {
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: #9aa8bd;
+    margin-top: var(--spacing-md);
+    max-width: 400px;
+}
+
+.brandFeats {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.feat {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 14.5px;
+    color: #cdd7e6;
+}
+
+.feat .dot {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-md);
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+}
+
+.brandFoot {
+    font-size: 12.5px;
+    color: #5c6b82;
+}
+
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.glowA {
+    width: 360px;
+    height: 360px;
+    background: var(--color-primary);
+    top: -90px;
+    right: -90px;
+    opacity: 0.28;
+}
+
+.glowB {
+    width: 280px;
+    height: 280px;
+    background: var(--color-teal);
+    bottom: -80px;
+    left: 30%;
+    opacity: 0.16;
+}
+
+/* ---------- LADO FORM ---------- */
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.card {
+    width: 100%;
+    max-width: 392px;
+}
+
+.welcome {
+    font-size: 26px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    letter-spacing: -0.4px;
+}
+
+.welcomeSub {
+    font-size: 14px;
+    color: var(--color-text-weak);
+    margin-top: 7px;
+}
+
+.form {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+.inputWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputWrap .ic {
+    position: absolute;
+    left: 14px;
+    color: var(--color-text-weak);
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.inputWrap input {
+    width: 100%;
+    padding: 13px 14px 13px 42px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-field);
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--color-text-primary);
+    outline: none;
+    transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.inputWrap input::placeholder {
+    color: #aab4c4;
+}
+
+.inputWrap input:focus {
+    background: #fff;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(47, 111, 237, 0.12);
+}
+
+.inputWrap .toggle {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-weak);
+    font-size: 13px;
+    padding: 6px 8px;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+}
+
+.inputWrap .toggle:hover {
+    color: var(--color-text-secondary);
+    background: var(--color-bg-app);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    user-select: none;
+}
+
+.check input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.link {
+    font-size: 13px;
+    color: var(--color-primary);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.submit {
+    margin-top: 6px;
+    padding: 14px;
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--color-text-white);
+    background: linear-gradient(135deg, var(--color-primary), #3a78f0);
+    box-shadow: 0 8px 20px rgba(47, 111, 237, 0.32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    transition: filter 0.15s, transform 0.05s, box-shadow 0.15s;
+}
+
+.submit:hover {
+    filter: brightness(1.05);
+}
+
+.submit:active {
+    transform: translateY(1px);
+}
+
+.submit.loading {
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+.spin {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: sp 0.7s linear infinite;
+}
+
+@keyframes sp {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.err {
+    font-size: 13px;
+    color: var(--color-alert);
+    background: color-mix(in srgb, var(--color-alert) 10%, white);
+    border: 1px solid color-mix(in srgb, var(--color-alert) 30%, white);
+    padding: 10px 13px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 26px 0;
+    color: var(--color-text-weak);
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+}
+
+.sso {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    background: #fff;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.15s;
+}
+
+.sso:hover:not(:disabled) {
+    background: #f7f9fc;
+}
+
+.sso:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.signup {
+    text-align: center;
+    font-size: 13.5px;
+    color: var(--color-text-weak);
+    margin-top: var(--spacing-lg);
+}
+
+.signup a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.mobileLogo {
+    display: none;
+}
+
+@media (max-width: 880px) {
+    .stage {
+        grid-template-columns: 1fr;
+    }
+
+    .brand {
+        display: none;
+    }
+
+    .panel {
+        padding: 32px 24px;
+        min-height: 100vh;
+    }
+
+    .mobileLogo {
+        display: block;
+        width: 150px;
+        height: auto;
+        aspect-ratio: 327 / 168;
+        object-fit: contain;
+        margin: 0 auto 30px;
+    }
+}
