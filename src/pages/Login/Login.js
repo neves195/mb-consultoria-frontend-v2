@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
+import api from '../../services/api';
 
 function Login() {
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ function Login() {
     const [erro, setErro] = useState('');
     const [loading, setLoading] = useState(false);
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
         if (!email.trim() || !senha) {
@@ -24,11 +25,20 @@ function Login() {
         setErro('');
         setLoading(true);
 
-        // TODO (fase 2): substituir simulação por POST /api/auth/login real,
-        // salvar token no localStorage e tratar erro 401 com a caixa de erro.
-        setTimeout(() => {
+        try {
+            const resposta = await api.post('/api/auth/login', { email, senha});
+
+            localStorage.setItem('token', resposta.data.token);
+            localStorage.setItem('nome', resposta.data.nome);
+            localStorage.setItem('email', resposta.data.email);
+            localStorage.setItem('perfil', resposta.data.perfil);
+
             navigate('/dashboard');
-        }, 850);
+        } catch (error) {
+            setErro(error.response.data);
+        } finally {
+            setLoading(false);
+        }
     }
 
     return (
