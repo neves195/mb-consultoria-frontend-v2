@@ -1,0 +1,264 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+/* ===== Abas (controle segmentado/pill, como no resto do app dark-first) ===== */
+
+.abas {
+    display: inline-flex;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-md);
+    background-color: rgba(255, 255, 255, 0.06);
+    width: fit-content;
+}
+
+.aba {
+    background: none;
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.abaAtiva {
+    background-color: var(--color-bg-card);
+    color: var(--color-text-primary);
+    box-shadow: var(--shadow-card);
+}
+
+[data-theme='light'] .abas {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme='light'] .aba {
+    color: var(--color-text-secondary);
+}
+
+.secao {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+/* ===== Busca e filtros ===== */
+
+.linhaFiltros {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.campoBuscaWrapper {
+    position: relative;
+    flex: 1;
+    min-width: 240px;
+    max-width: 420px;
+}
+
+.iconeBusca {
+    position: absolute;
+    left: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.campoBusca {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) var(--spacing-xl);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-card);
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.seletorStatus {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-card);
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.mensagem {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+[data-theme='light'] .mensagem {
+    color: var(--color-text-secondary);
+}
+
+.mensagemErro {
+    color: var(--color-alert);
+    font-size: 14px;
+}
+
+/* ===== Tabela: células compostas e ações ===== */
+
+.celulaEmpresa {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.celulaPrincipal {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+.celulaSecundaria {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+}
+
+.acoes {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: flex-end;
+}
+
+.botaoIcone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-bg-field);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    font-size: 13px;
+}
+
+.botaoIcone:hover {
+    background-color: var(--color-border);
+}
+
+.vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    text-align: center;
+    color: var(--color-text-secondary);
+    padding: var(--spacing-lg) 0;
+}
+
+/* ===== Botões ===== */
+
+.botaoPrimario {
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+}
+
+.botaoPrimario:disabled {
+    opacity: 0.6;
+}
+
+.botaoSecundario {
+    background-color: var(--color-bg-field);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+}
+
+.botaoPerigo {
+    background-color: transparent;
+    color: var(--color-alert);
+    border: 1px solid var(--color-alert);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+}
+
+/* ===== Formulário ===== */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.fieldset {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    padding: var(--spacing-lg);
+}
+
+.legenda {
+    font-size: 14px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    padding: 0 var(--spacing-xs) var(--spacing-md);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    font-size: 13px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+}
+
+.campo input {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-field);
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.acoesForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.acoesFormDireita {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-left: auto;
+}
+
+.fieldset:disabled {
+    opacity: 0.7;
+}
+
+.fieldset:disabled .legenda {
+    opacity: 1;
+}

@@ -1,0 +1,35 @@
+.cabecalho {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-white);
+}
+
+.subtitulo {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: var(--spacing-xs);
+}
+
+.acao {
+    display: flex;
+    align-items: center;
+}
+
+/* PageHeader fica direto no fundo da página (fora de cards), então a cor do
+   texto precisa se adaptar ao tema — diferente do conteúdo de cards, que é
+   sempre branco e por isso usa as mesmas cores nos dois temas. */
+[data-theme='light'] .titulo {
+    color: var(--color-text-primary);
+}
+
+[data-theme='light'] .subtitulo {
+    color: var(--color-text-secondary);
+}
